@@ -42,15 +42,20 @@
                 font-size: 1.7rem!important;
             }
 
-            .webFooter button{
+            .webFooter button, .truckList button{
                 font-family: var(--bebas-font);
                 font-size: 1.2rem;
                 text-decoration: none;
                 width: 10rem;
             }
+
+            .truckList .active{
+                background-color: var(--bs-secondary);
+                color: var(--bs-light);
+            }
         </style>
 
-        <title>Web - Daily Plan</title>
+        <title>Web - Add Job</title>
     </head>
 <body>
 
@@ -72,7 +77,7 @@
                     <a class="nav-link active text-light" aria-current="page" href="/pages/webDailyPlan.html">Daily Plan</a>
                 </li>
                 <li class="nav-item mx-5">
-                    <a class="nav-link text-light" href="/pages/webWeeklyPlan.html">Weekly Plan</a>
+                    <a class="nav-link text-light" href="#">Weekly Plan</a>
                 </li>
                 <li class="nav-item mx-5">
                     <a class="nav-link text-light" href="#">Archives</a>
@@ -87,76 +92,98 @@
     </header>
 
     <!-- Page Title -->
-    <div class="container-sm text-dark px-3 p-4">
-        <div class="row justify-content webDate">
-            <h6 class="todaysDate col-6 align-self-center" id="todaysDate"></h6>
-        </div>
-    </div>
-
-    <!-- Truck Job Table -->
-    <div class="container-fluid bg-secondary vh-100">
-        <div class="container px-4 p-3 webDailyPlanTruckCard bg-secondary vh-100">
-            <div class="row gy-2">
-                <div class="col-12">
-                    <div class="card mainPageJobCard">
-                        <div class="card-body">
-                            <div class="row justify-content-between">
-                                <div class="col-11">
-                                    <h5 class="card-title">Truck Name</h5>
-                                </div>
-                                <div class="col-1">                            
-                                    <a href="/pages/webAddJob.html" class="btn btn-primary btn-sm text-light rounded-pill">Add Job</a>
-                                </div>
-                            </div>
-                            <!-- <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Job 1</li>
-                                <li class="list-group-item">Job 2</li>
-                                <li class="list-group-item">Job 3</li>
-                                <li class="list-group-item">Job 4</li>
-                            </ul> -->
-                            <div class="row">
-                                <div class="col pt-3">
-                                    <table class="table table-bordered table-responsive ">
-                                        <thead>
-                                            <tr class="table-light">
-                                                <th scope="col" class="col-2">Job</th>
-                                                <th scope="col">Type</th>
-                                                <th scope="col" class="col-2">Order #</th>
-                                                <th scope="col" class="col-2">Reference</th>
-                                                <th scope="col">Pallets</th>
-                                                <th scope="col">Weight (kg)</th>
-                                                <th scope="col" class="col-2">Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">Upper Hutt Mega</th>
-                                                <td>Delivery</td>
-                                                <td>SEM173666</td>
-                                                <td>TUI181500</td>
-                                                <td>18</td>
-                                                <td>17565</td>
-                                                <td>Loaded</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">Kapiti Mega</th>
-                                                <td>Delivery</td>
-                                                <td>SOM112677</td>
-                                                <td>TUI181501</td>
-                                                <td>7</td>
-                                                <td>4980</td>
-                                                <td>Loaded</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="container-sm text-dark px-3 p-4 truckList">
+        <div class="row m-auto align-items-center">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    Truck 1
+                </button>
+                <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Truck 2</a>
+                    <a class="dropdown-item" href="#">Truck 3</a>
+                    <a class="dropdown-item" href="#">Truck 4</a>
+                  </div>
             </div>
         </div>
     </div>
+
+    <div class="container-fluid bg-secondary">
+        <div class="container py-5 px-4 p-3 webWeeklyPlanTruckCard bg-secondary">
+            <div class="card w-75 m-auto">
+                <div class="card-body">
+                    <form action="input">
+                        <div class="row gy-5">
+                            <div class="col-2">  
+                                <label for="addJobDate" class="form-label p-1">Date:</label>
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="form-control p-1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">  
+                                <label for="addJobDate" class="form-label p-1">Destination:</label>
+                            </div>
+                            <div class="col-10">
+                                <input type="text" class="form-control p-1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">  
+                                <label for="addJobDate" class="form-label p-1">Type:</label>
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control p-1">
+                            </div>
+                            <div class="col-2">  
+                                <label for="addJobDate" class="form-label p-1">Order #:</label>
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control p-1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">  
+                                <label for="addJobDate" class="form-label p-1">Reference:</label>
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control p-1">
+                            </div>
+                            <div class="col-2">  
+                                <label for="addJobDate" class="form-label p-1">Pallets:</label>
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control p-1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-2">  
+                                <label for="addJobDate" class="form-label p-1">Weight:</label>
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control p-1">
+                            </div>
+                            <div class="col-2">  
+                                <label for="addJobDate" class="form-label p-1">Status:</label>
+                            </div>
+                            <div class="col-4">
+                                <input type="text" class="form-control p-1">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row justify-content-end me-3">
+                        <div class="col-1 ">
+                            <button type="button" class="btn btn-primary text-light">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+
+        </div>
+    </div>
+
+
+
 
     <!-- Footer -->
     <div class="container-fluid bg-primary p-4">
@@ -189,6 +216,7 @@
             </div>
         </footer>
     </div>
+
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>

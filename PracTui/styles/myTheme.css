@@ -2798,8 +2798,10 @@ fieldset:disabled .btn {
 
 .dropdown-menu-dark {
   color: #dee2e6;
-  background-color: #343a40;
+  background-color: var(--bs-secondary);
   border-color: rgba(0, 0, 0, 0.15);
+  font-family: var(--bebas-font);
+  font-size: 1.5rem;
 }
 
 .dropdown-menu-dark .dropdown-item {
