@@ -17,33 +17,33 @@
         }
 
         .flex-row {
-    display: flex
-}
+          display: flex
+        }
 
-.wrapper {
-    border: 1px solid var(--bs-secondary);
-    border-right: 0
-}
+        .wrapper {
+            border: 1px solid var(--bs-secondary);
+            border-right: 0
+        }
 
-#signature-pad {
-    background: #fff;
-    width: 100%;
-    height: 100%;
-    cursor: crosshair
-}
+        #signature-pad {
+            background: #fff;
+            width: 100%;
+            height: 100%;
+            cursor: crosshair
+        }
 
-#clear {
-    height: 100%;
-    background: var(--bs-secondary);
-    border: 1px solid transparent;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer
-}
-#clear span {
-    transform: rotate(90deg);
-    display: block
-}
+        #clear {
+            height: 100%;
+            background: var(--bs-secondary);
+            border: 1px solid transparent;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer
+        }
+        #clear span {
+            transform: rotate(90deg);
+            display: block
+        }
     </style>
     <title>Job Details</title>
 
@@ -72,6 +72,9 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link text-light" href="completedJobs.html">Completed Jobs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="pages/enterHours.html">Enter Hours</a>
                 </li>
               </ul>
             </div>
@@ -103,28 +106,61 @@
               </div>
           </div>
       </div>
+
+
       <div class="container px-4 customerInputContainer">
-        <div class="card customerInputCard ">
+        <button type="button" class="btn btn-primary text-light " data-bs-toggle="modal" data-bs-target="#customerInput">Customer Input</button>
+
+        <div class="modal fade" id="customerInput" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Customer Input</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <label for="customerName" class="form-label">Enter Name:</label>
+            <input type="text" class="form-control" id="customerNameInput">
+            <label for="customerSignature" class="form-label">Enter Signature:</label>
+
+            <canvas id="signature-pad" width="200px" height="100%" style="border: 1px solid #ddd;"></canvas>
+            <br>
+            <button id="clear" class="btn btn-primary btn-sm text-light">Clear</button>
+            <button type="button" class="btn btn-primary btn-sm text-light position-absolute ">Enter Photo</button>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary text-light">Save changes</button>
+                <button type="button" class="btn btn-secondary text-light" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <!-- <div class="card customerInputCard ">
             <div class="card-body">
             <label for="customerName" class="form-label">Enter Name:</label>
             <input type="text" class="form-control" id="customerNameInput">
             <label for="customerSignature" class="form-label">Enter Signature:</label>
 
-            <!-- <div class="flex-row">
+            <div class="flex-row">
               <div class="wrapper"> <canvas id="signature-pad" width="400" height="200"></canvas> </div>
               <div class="clear-btn"> <button id="clear"><span> Clear </span></button> </div>
-            </div> -->
+            </div>
 
             <canvas id="signature-pad" width="200px" height="100%" style="border: 1px solid #ddd;"></canvas>
             <br>
             <button id="clear" class="btn btn-primary btn-sm text-light">Clear</button>
-            <!-- <textarea class="form-control" id="customerSignatureInput" rows="5"></textarea> -->
+            <textarea class="form-control" id="customerSignatureInput" rows="5"></textarea>
           </div>
-        </div>
-        <div class="container position-relative">
+        </div> -->
+        <!-- <div class="container position-relative">
           <button type="button" class="btn btn-primary btn-sm text-light mt-3 position-absolute start-0">Enter Photo</button>
           <button type="button" class="btn btn-primary btn-sm text-light mt-3 position-absolute end-0">Submit</button>
-        </div>
+        </div> -->
       </div>
     </div>
 

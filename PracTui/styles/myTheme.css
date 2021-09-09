@@ -58,8 +58,8 @@ body {
   padding-top: 0px;
 }
 
-@media (max-width: 575px){
-  body{
+@media (max-width: 575px) {
+  body {
     padding-top: 65px;
   }
 }
@@ -132,6 +132,7 @@ h3,
 
 h4,
 .h4 {
+  font-family: var(--bs-font-sans-serif);
   font-size: calc(1.275rem + 0.3vw);
 }
 
@@ -3422,7 +3423,7 @@ fieldset:disabled .btn {
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border-radius: 1rem;
 }
 
 .card > hr {
