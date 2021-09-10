@@ -76,6 +76,10 @@ body {
   body {
     padding-top: 65px;
   }
+
+  .loginBody {
+    padding-top: 0 !important;
+  }
 }
 
 hr {
