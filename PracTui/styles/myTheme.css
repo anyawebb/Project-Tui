@@ -58,6 +58,20 @@ body {
   padding-top: 0px;
 }
 
+.darkMobileContainer {
+  background-image: url(/images/backgroundDots2.png);
+  background-color: var(--bs-secondary);
+  background-size: 150%;
+  background-repeat: no-repeat;
+}
+
+.darkContainer {
+  background-image: url(/images/backgroundDots2.png);
+  background-color: var(--bs-secondary);
+  background-size: 50%;
+  background-repeat: repeat-x;
+}
+
 @media (max-width: 575px) {
   body {
     padding-top: 65px;
